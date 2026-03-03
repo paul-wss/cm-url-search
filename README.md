@@ -1,6 +1,6 @@
 # Search for URL in Google – Chrome Extension
 
-Adds a **"Search \"<URL>\" in Google"** entry to the context menu when a **URL is selected**
+Adds a **"Search for <URL> in Google"** entry to the context menu when a **URL is selected**
 (e.g. `wikipedia.org`) – exactly like Chrome already does for regular text selections.
 Clicking it opens a new tab with the corresponding Google search.
 
@@ -16,7 +16,7 @@ The extension is active immediately – no restart required.
 ## Usage
 
 1. Select a URL on any page (e.g. `wikipedia.org`).
-2. Right-click → select **"Search \"wikipedia.org\" in Google"**.
+2. Right-click → select **"Search for \"wikipedia.org\"in Google"**.
 3. A new tab opens with `https://www.google.com/search?q=wikipedia.org`.
 
 ## Files
