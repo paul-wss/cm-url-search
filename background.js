@@ -1,27 +1,27 @@
 const MENU_ITEM_ID = "url-google-search";
 
-// Kontextmenü-Eintrag beim Installieren anlegen
+// Register context menu entry on install
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: MENU_ITEM_ID,
-    title: "In Google suchen",
+    title: "Search in Google",
     contexts: ["selection"],
   });
 });
 
-// Titel dynamisch anpassen, bevor das Menü angezeigt wird
+// Dynamically update the title just before the menu is shown
 chrome.contextMenus.onShown.addListener((info) => {
   if (!info.selectionText) return;
 
   const text = info.selectionText.trim();
   chrome.contextMenus.update(
     MENU_ITEM_ID,
-    { title: `Nach "${text}" in Google suchen` },
+    { title: `Search "${text}" in Google` },
     () => chrome.contextMenus.refresh()
   );
 });
 
-// Klick-Handler: neues Tab mit Google-Suche öffnen
+// Click handler: open a new tab with the Google search
 chrome.contextMenus.onClicked.addListener((info) => {
   if (info.menuItemId !== MENU_ITEM_ID || !info.selectionText) return;
 

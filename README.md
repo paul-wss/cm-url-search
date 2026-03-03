@@ -1,27 +1,27 @@
-# URL in Google suchen – Chrome-Extension
+# Search URL in Google – Chrome Extension
 
-Fügt im Kontextmenü bei **markierten URLs** (z. B. `wikipedia.org`) den Eintrag  
-**„Nach „wikipedia.org" in Google suchen"** hinzu – genau wie Chrome es bei gewöhnlichem  
-Text ohnehin anzeigt. Ein Klick öffnet ein neues Tab mit der entsprechenden Google-Suche.
+Adds a **"Search \"wikipedia.org\" in Google"** entry to the context menu when a **URL is selected**
+(e.g. `wikipedia.org`) – exactly like Chrome already does for regular text selections.
+Clicking it opens a new tab with the corresponding Google search.
 
-## Installation (Entwicklermodus)
+## Installation (Developer Mode)
 
-1. Chrome öffnen und `chrome://extensions` aufrufen.
-2. Oben rechts **„Entwicklermodus"** aktivieren.
-3. **„Entpackte Erweiterung laden"** klicken.
-4. Diesen Ordner (`cm-url-search`) auswählen.
+1. Open Chrome and navigate to `chrome://extensions`.
+2. Enable **"Developer mode"** in the top-right corner.
+3. Click **"Load unpacked"**.
+4. Select this folder (`cm-url-search`).
 
-Die Extension ist sofort aktiv – kein Neustart nötig.
+The extension is active immediately – no restart required.
 
-## Verwendung
+## Usage
 
-1. Eine URL auf einer beliebigen Seite markieren (z. B. `wikipedia.org`).
-2. Rechtsklick → **„Nach „wikipedia.org" in Google suchen"** auswählen.
-3. Ein neues Tab öffnet sich mit `https://www.google.com/search?q=wikipedia.org`.
+1. Select a URL on any page (e.g. `wikipedia.org`).
+2. Right-click → select **"Search \"wikipedia.org\" in Google"**.
+3. A new tab opens with `https://www.google.com/search?q=wikipedia.org`.
 
-## Dateien
+## Files
 
-| Datei | Beschreibung |
+| File | Description |
 |---|---|
-| `manifest.json` | Extension-Metadaten (Manifest V3) |
-| `background.js` | Service Worker: erstellt und verwaltet den Kontextmenü-Eintrag |
+| `manifest.json` | Extension metadata (Manifest V3) |
+| `background.js` | Service worker: creates and manages the context menu entry |

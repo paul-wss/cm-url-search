@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "URL in Google suchen",
+  "name": "Search URL in Google",
   "version": "1.0",
-  "description": "Fügt im Kontextmenü bei markierten URLs einen 'In Google suchen'-Eintrag hinzu.",
+  "description": "Adds a 'Search in Google' context menu entry for selected URLs.",
   "permissions": [
     "contextMenus",
     "tabs"
