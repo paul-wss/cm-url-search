@@ -13,7 +13,7 @@ chrome.runtime.onInstalled.addListener(() => {
 chrome.runtime.onMessage.addListener((msg) => {
   if (msg.type === "selection" && msg.text) {
     chrome.contextMenus.update(MENU_ITEM_ID, {
-      title: `Search "${msg.text}" in Google`,
+      title: `Search for "${msg.text}" in Google`,
     });
   }
 });

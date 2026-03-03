@@ -1,4 +1,4 @@
-# Search URL in Google – Chrome Extension
+# Search for URL in Google – Chrome Extension
 
 Adds a **"Search \"wikipedia.org\" in Google"** entry to the context menu when a **URL is selected**
 (e.g. `wikipedia.org`) – exactly like Chrome already does for regular text selections.
