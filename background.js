@@ -9,16 +9,13 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
-// Dynamically update the title just before the menu is shown
-chrome.contextMenus.onShown.addListener((info) => {
-  if (!info.selectionText) return;
-
-  const text = info.selectionText.trim();
-  chrome.contextMenus.update(
-    MENU_ITEM_ID,
-    { title: `Search "${text}" in Google` },
-    () => chrome.contextMenus.refresh()
-  );
+// Update the title when the content script reports a right-click selection
+chrome.runtime.onMessage.addListener((msg) => {
+  if (msg.type === "selection" && msg.text) {
+    chrome.contextMenus.update(MENU_ITEM_ID, {
+      title: `Search "${msg.text}" in Google`,
+    });
+  }
 });
 
 // Click handler: open a new tab with the Google search
