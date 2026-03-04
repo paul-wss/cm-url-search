@@ -9,12 +9,13 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
-// Update the title when the content script reports a right-click selection
+// Update the title when the selection changes (sent from the content script)
 chrome.runtime.onMessage.addListener((msg) => {
-  if (msg.type === "selection" && msg.text) {
-    chrome.contextMenus.update(MENU_ITEM_ID, {
-      title: `Search for "${msg.text}" in Google`,
-    });
+  if (msg.type === "selection") {
+    const title = msg.text
+      ? `Search for "${msg.text}" in Google`
+      : "Search in Google";
+    chrome.contextMenus.update(MENU_ITEM_ID, { title });
   }
 });
 
